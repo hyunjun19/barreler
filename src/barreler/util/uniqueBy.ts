@@ -1,6 +1,6 @@
 export function uniqueBy<T>(hash: (x: T) => string | number, arr: T[]): T[] {
   let result = [];
-  let table = {};
+  let table: Record<string, boolean> = {};
 
   for (const item of arr) {
     const key = hash(item);
